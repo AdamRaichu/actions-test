@@ -9,12 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: define the function
+    - name: define and run the function
       run: |
         getFromAPI() {
           curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows
           curl https://api.github.com/repos/adamraichu/actions-test/commits
         }
-    - name: run the function
-      run: |
         getFromAPI
