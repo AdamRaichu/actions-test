@@ -12,7 +12,9 @@ jobs:
     - name: define and run the function
       run: |
         getFromAPI() {
-          curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows
-          curl https://api.github.com/repos/adamraichu/actions-test/commits
+          wk="$(curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows)"
+          com="$(curl https://api.github.com/repos/adamraichu/actions-test/commits)"
+          echo $wk
+          echo $com
         }
         getFromAPI
