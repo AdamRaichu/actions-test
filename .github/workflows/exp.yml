@@ -5,16 +5,13 @@ on:
     branches:
       - main
 jobs:
-  functions-test:
+  lint:
+    name: Run linters
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: define and run the function
-      run: |
-        getFromAPI() {
-          wk="$(curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows)"
-          com="$(curl https://api.github.com/repos/adamraichu/actions-test/commits)"
-          echo $wk
-          echo $com
-        }
-        getFromAPI
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: npm install
+      - run: npm run lint
