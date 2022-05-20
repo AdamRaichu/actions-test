@@ -14,6 +14,8 @@ jobs:
         strM() {
           v="Hello"
           v+=" World"
+          v+=\n
+          v+=Newline
           echo $v
         }
         strM
