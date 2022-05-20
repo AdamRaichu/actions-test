@@ -18,4 +18,4 @@ jobs:
     steps:  
     - name: Get repository info
       run: |
-        echo Hello there. :)
+        "echo Hello there. :)"
