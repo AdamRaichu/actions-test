@@ -12,8 +12,8 @@ jobs:
     - name: define and run the function
       run: |
         strM() {
-          v = 'Hello'
-          v += " World"
+          v="Hello"
+          v+=" World"
           echo $v
         }
         strM
