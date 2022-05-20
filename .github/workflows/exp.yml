@@ -12,9 +12,8 @@ jobs:
     - name: define and run the function
       run: |
         getFromAPI() {
-          wk="$(curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows)"
-          com="$(curl https://api.github.com/repos/adamraichu/actions-test/commits)"
-          echo $wk
-          echo $com
+          v = 'Hello'
+          v += " World"
+          echo $v
         }
         getFromAPI
