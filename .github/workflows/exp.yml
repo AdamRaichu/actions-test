@@ -12,10 +12,7 @@ jobs:
     - name: define and run the function
       run: |
         strM() {
-          v="Hello"
-          v+=" World"
-          v+=$"\n"
-          v+=Newline
-          echo $v
+          STR=$'Hello\nWorld'
+          echo "$STR"
         }
         strM
