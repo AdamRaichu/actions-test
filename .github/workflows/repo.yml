@@ -20,7 +20,7 @@ jobs:
       run: curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows
     - name: Get commits
       run: curl https://api.github.com/repos/adamraichu/actions-test/commits
-  update-lastUpdated.txt:
+  update-lastUpdated_txt:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
