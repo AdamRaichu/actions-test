@@ -18,4 +18,4 @@ jobs:
     steps:  
     - name: Get repository info
       run: |
-        ls ${{ github.workspace }}
+        echo Hello there. :)
