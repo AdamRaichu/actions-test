@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:  
-    - name: Get repo info
+    - name: Get `workflows` contents info
       run: curl https://api.github.com/repos/AdamRaichu/actions-test/contents/.github/workflows
+    - name: Get commits
       run: curl https://api.github.com/repos/adamraichu/actions-test/commits
