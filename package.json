@@ -4,5 +4,8 @@
   "description": "My own playground for github actions.",
   "repository": "github:AdamRaichu/actions-test",
   "homepage": "https://github.com/AdamRaichu/actions-test",
-  "bugs": "https://github.com/AdamRaichu/actions-test/issues"
+  "bugs": "https://github.com/AdamRaichu/actions-test/issues",
+  "scripts": {
+    "postinstall": "node script.js"
+  }
 }
