@@ -3,5 +3,6 @@
   "version": "1.0.1",
   "description": "My own playground for github actions.",
   "repository": "github:AdamRaichu/actions-test",
-  "homepage": "https://github.com/AdamRaichu/actions-test"
+  "homepage": "https://github.com/AdamRaichu/actions-test",
+  "bugs": "https://github.com/AdamRaichu/actions-test/issues"
 }
