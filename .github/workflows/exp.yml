@@ -5,14 +5,12 @@ on:
     branches:
       - main
 jobs:
-  functions-test:
+  npm:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: define and run the function
-      run: |
-        strM() {
-          STR=$'Hello\nWorld'
-          echo "$STR"
-        }
-        strM
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 14
+    - run: npm ci
+    - run: npm test
