@@ -6,6 +6,9 @@ fs.writeFile('test.txt', content, err => {
     if (err) {
         console.error(err);
     }
-    console.log("This is from script.js")
+    console.log("text.txt file contents:")
+    console.log("==========")
+    console.log(content)
+    console.log("==========")
     // file written successfully
 });
