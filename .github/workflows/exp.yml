@@ -5,6 +5,13 @@ on:
     branches:
       - main
 jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        curl \
+         -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/OWNER/REPO/actions/jobs/JOB_ID
   npm:
     runs-on: ubuntu-latest
     steps:
