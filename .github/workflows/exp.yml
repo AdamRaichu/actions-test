@@ -19,3 +19,4 @@ jobs:
       with:
         script: |
           console.log('${{ github.event.inputs.input }}')
+          var fs = require("fs")
