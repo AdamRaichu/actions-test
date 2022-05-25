@@ -1,6 +1,9 @@
 name: Auto-triggered workflow
 on:
   workflow_dispatch: 
+    inputs:
+      input: 
+        required: true
   push:
     branches:
       - main
@@ -12,12 +15,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: |
-        npm i
-        node exp_yml-log.js
-        date > lastUpdated.txt
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add .
-        git commit -m "pushed from exp.yml"
-        git push
+    - uses: actions/github-script@v1
+      with:
+        script: |
+          console.log('${{ github.event.inputs.input }}')
