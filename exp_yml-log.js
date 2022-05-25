@@ -1,5 +1,5 @@
 const fs = require('fs');
-fs.readFile("myFile.txt", (err, buff) => {
+fs.readFile("github-actions.log", (err, buff) => {
   // if any error
   if (err) {
     console.error(err);
