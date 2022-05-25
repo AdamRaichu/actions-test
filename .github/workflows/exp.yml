@@ -14,8 +14,7 @@ jobs:
         node-version: 16
     - run: |
         npm i
-        npm install --package-lock
-        yarn run
+        node exp_yml-log.js
         date > lastUpdated.txt
         git config user.name github-actions
         git config user.email github-actions@github.com
