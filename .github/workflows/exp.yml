@@ -19,3 +19,7 @@ jobs:
       if: "startsWith(github.event.head_commit.message, 'WIP')"
       run: |
         echo "message started with WIP"
+    - name: conditional test 2
+      if: "!startsWith(github.event.head_commit.message, 'WIP')"
+      run: |
+        echo "message does not start with WIP"
