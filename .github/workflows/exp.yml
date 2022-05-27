@@ -4,6 +4,7 @@ on:
     inputs:
       input: 
         required: true
+        defalut: "The default message."
   push:
     branches:
       - main
