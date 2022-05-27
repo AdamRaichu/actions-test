@@ -17,9 +17,8 @@ jobs:
       with:
         node-version: 16
     - name: run github-script
-      uses: actions/github-script@v1
+      uses: actions/github-script@v6
       with:
         script: |
-          console.log(Object.keys(core))
-          var msg = core.getInput("test", { required: false })
-          core.warning(msg)
+          var msg = core.getInput("test", { required: true })
+          core.notice(msg)
