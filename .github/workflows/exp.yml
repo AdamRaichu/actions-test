@@ -15,6 +15,5 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: conditional test (passed once)
-      if: "!startsWith(github.event.head_commit.message, 'WIP')"
-      run: echo "commit message does not contain 'WIP'"
+    - name: commit message test
+      run: echo "${{ github.event.head_commit.message }}"
