@@ -15,8 +15,6 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - uses: actions/github-script@v1
-      with:
-        script: |
-          console.log('${{ github.event.inputs.input }}')
-          var fs = require("fs")
+    - name: conditional test
+      if: "!startsWith(github.event.head_commit.message, 'WIP')"
+      run: echo "commit message does not contain 'WIP'"
