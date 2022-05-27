@@ -2,7 +2,7 @@ name: Auto-triggered workflow
 on:
   workflow_dispatch: 
     inputs:
-      input: 
+      test: 
         required: true
         defalut: "The default message."
   push:
@@ -20,5 +20,5 @@ jobs:
       uses: actions/github-script@v1
       with:
         script: |
-          var msg = core.getInput("input", { required: true })
+          var msg = core.getInput("test", { required: true })
           core.notice(msg)
