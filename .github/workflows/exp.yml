@@ -15,5 +15,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: commit message test
-      run: echo "${{ github.event.head_commit.message }}"
+    - name: conditional test
+      if: "startsWith(github.event.head_commit.message, 'WIP')"
+      run: |
+        echo "message started with WIP"
