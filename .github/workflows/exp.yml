@@ -20,6 +20,6 @@ jobs:
       uses: actions/github-script@v1
       with:
         script: |
-          console.log(Obj.keys(core))
+          console.log(Object.keys(core))
           var msg = core.getInput("test", { required: false })
           core.notice(msg)
