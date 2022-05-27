@@ -15,11 +15,9 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: conditional test
-      if: "startsWith(github.event.head_commit.message, 'WIP')"
-      run: |
-        echo "message started with WIP"
-    - name: conditional test 2
-      if: "!startsWith(github.event.head_commit.message, 'WIP')"
-      run: |
-        echo "message does not start with WIP"
+    - name: run github-script
+      uses: actions/github-script@v1
+      with:
+        script: |
+          var msg = core.getInput("input", { required: true })
+          core.notice(msg)
