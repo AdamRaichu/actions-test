@@ -20,5 +20,6 @@ jobs:
       uses: actions/github-script@v1
       with:
         script: |
+          const core = require('@actions/core');
           var msg = core.getInput("test", { required: false })
           core.notice(msg)
