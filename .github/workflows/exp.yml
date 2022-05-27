@@ -22,4 +22,4 @@ jobs:
         script: |
           console.log(Object.keys(core))
           var msg = core.getInput("test", { required: false })
-          core.notice(msg)
+          core.warning(msg)
