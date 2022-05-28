@@ -4,7 +4,7 @@ on:
     inputs:
       test: 
         required: true
-        defalut: "The default message."
+        default: "The default message."
   push:
     branches:
       - main
@@ -20,5 +20,5 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          var msg = core.getInput("test", { required: true })
-          core.notice(msg)
+          var tools = require("https://adamraichu.github.io/code/tools.js")
+          console.log(Object.keys(tools))
